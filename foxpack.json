@@ -3,7 +3,7 @@
   "kind": "foxdock-plugin",
   "id": "designer",
   "foxdockApi": 1,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tools for the Form Designer and the Class Designer: inspect the selection, copy it as code, and find the control under the mouse",
   "license": "MIT",
   "files": [

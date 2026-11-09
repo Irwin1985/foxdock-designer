@@ -21,8 +21,6 @@
 *
 * Al desmontar o cerrar el IDE (OnShutdown del paquete), _BUILDER vuelve a ser el
 * de antes, si sigue siendo FoxDock; si otro lo cambió después, se queda el suyo.
-*
-* Fichero en CP1252, con los acentos escritos.
 *==================================================================
 
 DEFINE CLASS DesignerBuilder AS Custom

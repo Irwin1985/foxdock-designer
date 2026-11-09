@@ -13,15 +13,13 @@
 * el del lParam del WM_CONTEXTMENU: da el objeto del
 * formulario en diseño. Sin coordenadas, y con el ratón fuera de VFP, SYS(1270)
 * da _SCREEN y no .F.: _SCREEN no es un control, y se dice que no hay ninguno.
-*
-* Fichero en CP1252, con los acentos escritos.
 *==================================================================
 
 DEFINE CLASS DesignerMouse AS Custom
 	cId = "mouse"
 	oHost = .NULL.
 	cKey = ""
-	cLast = ""        && lo último que dijo (para la suite)
+	cLast = ""        && lo último que dijo (para las pruebas)
 
 	PROCEDURE Init
 		LPARAMETERS toHost
@@ -111,12 +109,12 @@ DEFINE CLASS DesignerMouse AS Custom
 		RETURN This.InspectAt(lnX, lnY)
 	ENDPROC
 
-	*-- Lo de la tecla con un punto dado (la suite y el arnés lo llaman así).
+	*-- Lo de la tecla con un punto dado (así lo llaman las pruebas).
 	PROCEDURE InspectAt
 		LPARAMETERS tnX, tnY
 		LOCAL loO
 		loO = This.ObjectAt(tnX, tnY)
-		*-- cLast, en inglés (la suite y el log); el aviso, en el idioma de FoxDock.
+		*-- cLast, en inglés (las pruebas y el log); el aviso, en el idioma de FoxDock.
 		IF ISNULL(loO)
 			This.cLast = "no control under the mouse (" + TRANSFORM(tnX) + "," + TRANSFORM(tnY) + ")"
 			This.oHost.Notify(This.oHost.Translate("designer.mouse.none", tnX, tnY), "Designer: " + This.cLast)

@@ -15,8 +15,6 @@
 *
 * Sin un diseñador abierto, las barras lo dicen en la barra de estado y no
 * hacen nada. No hace falta que esté delante. Nada abre un diálogo.
-*
-* Fichero en CP1252, con los acentos escritos.
 *==================================================================
 
 #DEFINE CRLF CHR(13) + CHR(10)

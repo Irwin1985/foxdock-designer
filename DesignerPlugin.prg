@@ -30,8 +30,6 @@
 *     parámetros van por valor. Por eso la llamada entra por FoxDockMain.prg
 *     ANTES de su TRY (FoxDockBuilder).
 *   - El texto que manda el agente llega en CP1252: no se convierte.
-*
-* Superficie pública en inglés. Fichero en CP1252, con los acentos escritos.
 *==================================================================
 
 #DEFINE CRLF CHR(13) + CHR(10)
@@ -40,7 +38,7 @@ DEFINE CLASS DesignerPlugin AS PluginBase
 	cId = "designer"
 	cTitle = "Designer"
 	nOrder = 940
-	cVersion = "0.1.0"
+	cVersion = "0.1.1"
 	lWantsIdle = .T.
 	oModules = .NULL.
 	oScope = .NULL.
@@ -628,7 +626,7 @@ DEFINE CLASS DesignerSaveLater AS Timer
 	cWas = ""         && la ventana que estaba delante
 	cBefore = ""      && el sello de antes
 	cSaved = ""       && lo que pasó al guardar
-	cResult = ""      && lo que pasó al final (para la suite); vacío mientras dura
+	cResult = ""      && lo que pasó al final (para las pruebas); vacío mientras dura
 	nTries = 0        && ticks esperando al diseñador delante
 	nBack = 0         && ticks esperando a la ventana que estaba
 	cTrail = ""       && lo que vio cada tick

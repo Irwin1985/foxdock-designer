@@ -21,8 +21,6 @@
 * remove_control reasigna una propiedad; AddObject pone el nombre en
 * mayúsculas y add_control lo deja como lo pidió el agente; el código que
 * manda el agente llega en CP1252 y se escribe tal cual.
-*
-* Superficie pública en inglés. Fichero en CP1252.
 *==================================================================
 
 #DEFINE CRLF CHR(13) + CHR(10)
